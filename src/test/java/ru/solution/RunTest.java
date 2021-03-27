@@ -25,7 +25,7 @@ public class RunTest {
         InputStream is = new ByteArrayInputStream(inputFirst.getBytes());
         System.setIn(is);
         Run.main(new String[0]);
-        Assertions.assertEquals("90\r\n1 4 5", outputStreamCaptor.toString().trim());
+        Assertions.assertEquals("90\n1 4 5", outputStreamCaptor.toString().trim());
     }
 
     @Test
@@ -34,7 +34,7 @@ public class RunTest {
         InputStream is = new ByteArrayInputStream(inputSecond.getBytes());
         System.setIn(is);
         Run.main(new String[0]);
-        Assertions.assertEquals("20\r\n3", outputStreamCaptor.toString().trim());
+        Assertions.assertEquals("20\n3", outputStreamCaptor.toString().trim());
     }
 
     @Test
@@ -43,7 +43,7 @@ public class RunTest {
         InputStream is = new ByteArrayInputStream(inputThird.getBytes());
         System.setIn(is);
         Run.main(new String[0]);
-        Assertions.assertEquals("0\r\n3", outputStreamCaptor.toString().trim());
+        Assertions.assertEquals("0\n3", outputStreamCaptor.toString().trim());
     }
 
     @Test
@@ -52,7 +52,7 @@ public class RunTest {
         InputStream is = new ByteArrayInputStream(inputThird.getBytes());
         System.setIn(is);
         Run.main(new String[0]);
-        Assertions.assertEquals("2\r\n2", outputStreamCaptor.toString().trim());
+        Assertions.assertEquals("2\n2", outputStreamCaptor.toString().trim());
     }
 
     @Test
@@ -61,7 +61,7 @@ public class RunTest {
         InputStream is = new ByteArrayInputStream(inputThird.getBytes());
         System.setIn(is);
         Run.main(new String[0]);
-        Assertions.assertEquals("1\r\n3", outputStreamCaptor.toString().trim());
+        Assertions.assertEquals("1\n3", outputStreamCaptor.toString().trim());
     }
 
     @Test
@@ -70,7 +70,7 @@ public class RunTest {
         InputStream is = new ByteArrayInputStream(inputThird.getBytes());
         System.setIn(is);
         Run.main(new String[0]);
-        Assertions.assertEquals("3\r\n4", outputStreamCaptor.toString().trim());
+        Assertions.assertEquals("3\n4", outputStreamCaptor.toString().trim());
     }
 
     @Test
@@ -79,7 +79,7 @@ public class RunTest {
         InputStream is = new ByteArrayInputStream(inputThird.getBytes());
         System.setIn(is);
         Run.main(new String[0]);
-        Assertions.assertEquals("-1\r\n-1", outputStreamCaptor.toString().trim());
+        Assertions.assertEquals("-1\n-1", outputStreamCaptor.toString().trim());
     }
 
     @AfterEach

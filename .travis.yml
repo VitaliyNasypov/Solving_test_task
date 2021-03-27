@@ -1,0 +1,18 @@
+# Travis CI будет использовать язык java.
+language: java
+install: true
+
+# Версия JDK для сборки проекта
+jdk: openjdk11
+
+os:
+  - linux
+
+dist: xenial
+
+# После выполнения сборки запустить скрипт, который будет собирать статистику по JaCoCo
+# И отправлять на сервис https://codecov.io/
+after_success: bash <(curl -s https://codecov.io/bash)
+env:
+  global:
+    - CODECOV_TOKEN="c9ef01ce-3516-49b7-92a6-54af27f9910e"
